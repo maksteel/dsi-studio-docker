@@ -1,6 +1,6 @@
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/manishka/dsi-studio-docker)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/manishka/dsi-studio-docker)
-![Docker Pulls](https://img.shields.io/docker/pulls/manishka/dsi-studio-docker)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/manishka/dsi-studio-docker)](https://hub.docker.com/r/manishka/dsi-studio-docker/builds)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/manishka/dsi-studio-docker)](https://hub.docker.com/r/manishka/dsi-studio-docker/builds)
+[![Docker Pulls](https://img.shields.io/docker/pulls/manishka/dsi-studio-docker)](https://hub.docker.com/r/manishka/dsi-studio-docker)
 
 # dsi-studio-docker
 
