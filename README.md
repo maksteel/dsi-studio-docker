@@ -34,5 +34,21 @@ you can run either create your own base image with the appropriate ids or run be
 xhost +
 ``` 
 
+### over SSH with X11Forwarding
+If you are running docker remotely with ssh and see the error
+> qt.qpa.xcb: could not connect to display localhost:64.0
+> qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+> This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+>
+> Available platform plugins are: linuxfb, minimal, offscreen, vnc, xcb.
 
+you may need additional docker parameters `--net host  -v $HOME/.Xauthority:/root/.Xauthority:rw`
+
+```
+docker run -ti --rm -e DISPLAY=$DISPLAY \
+                    --net host  -v $HOME/.Xauthority:/root/.Xauthority:rw \
+                    -v /tmp/.X11-unix:/tmp/.X11-unix \
+                    -v $PWD:/data \
+                    manishka/dsi-studio-docker:latest 
+```
 
