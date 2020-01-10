@@ -36,6 +36,7 @@ RUN mv frankyeh-TIPL-* src/tipl
 
 RUN mkdir build
 WORKDIR build
+RUN strip --remove-section=.note.ABI-tag /opt/qt512/lib/libQt5Core.so.5
 RUN source /opt/qt512/bin/qt512-env.sh && qmake ../src && make
 
 WORKDIR ..
